@@ -4,22 +4,18 @@
 
 В терминале переходим на папку sharding-repl-cache
 
-```bash
-cd sharding-repl-cache
-```
-
 Запускаем mongodb и приложение
 
-```bash
+```shell
 docker compose up -d
 ```
 
-Mongodb:
+Mongodb: 
 - Инициализируем сервер конфигурации,
 - Инициализируем шарды и реплики,
 - Инициализируем роутер и наполните его тестовыми данными:
 
-```bash
+```shell
 ./scripts/mongo-init.sh
 ```
 
@@ -45,6 +41,3 @@ Mongodb:
 Второй и последующие вызовы эндпоинта /<collection_name>/users выполняются <100мс:
 
 http://localhost:8080/helloDoc/users
-
-Схема приложения schemas/app-varsion_5.drawio:
-![img.png](schemas/app-varsion_5.jpg)
